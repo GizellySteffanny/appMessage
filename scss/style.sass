@@ -1,5 +1,5 @@
 //Font Google
-@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900')
 
 // Variables
 
@@ -19,3 +19,40 @@ $white: #fff
 
 html, body 
   font-family: 'Roboto', sans-serif
+  background: $bg
+
+#chat
+  width: 800px
+  height: 100%
+  margin: 0 auto
+  .bubble
+    margin-bottom: 3em
+    .content
+      background: $white
+      box-shadow: 0px 9px 30px 0 rgba(44, 55, 79, 0.07)
+      border-radius: 25px 25px 25px 2px
+      &::before, &::after
+        content: ""
+        display: table
+      &::after
+        clear: both
+      .avatar
+        width: 40px
+        height: 40px
+        border-radius: 100%
+        overflow: hidden
+        float: left
+        margin: 2em
+        img
+          height: 100%
+        .copy
+          font-size: 1.1em
+          line-height: 1.75
+          color: $copy
+          padding: 1.5em
+          margin: 0
+      .time
+        font-weight: 700
+        font-size: .8em
+        clear: both
+        color: $main
