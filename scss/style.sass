@@ -21,6 +21,26 @@ html, body
   font-family: 'Roboto', sans-serif
   background: $bg
 
+.button
+  padding: 1em 1.5em
+  border-radius: .35em
+  text-decoration: none
+  font-weight: 700
+  font-size: .9em
+  transition: background .4s ease-in-out
+
+.button_blue
+  background: $highlight
+  color: $white
+  &:hover
+    background: darken($highlight, 20%)
+
+.button_download
+  background: $secondary
+  color: $white
+  &:hover
+    background: darken($secondary, 15%)
+
 #chat
   width: 800px
   height: 100%
@@ -31,6 +51,7 @@ html, body
       background: $white
       box-shadow: 0px 9px 30px 0 rgba(44, 55, 79, 0.07)
       border-radius: 25px 25px 25px 2px
+      display: inline-block
       &::before, &::after
         content: ""
         display: table
@@ -45,14 +66,65 @@ html, body
         margin: 2em
         img
           height: 100%
-        .copy
-          font-size: 1.1em
-          line-height: 1.75
-          color: $copy
-          padding: 1.5em
-          margin: 0
-      .time
-        font-weight: 700
-        font-size: .8em
-        clear: both
+      .cody
+        font-size: 1em
+        line-height: 1.75
+        color: $copy
+        padding: 1.5em
+        margin: 0
+    .time
+      font-weight: 500
+      font-size: .8em
+      clear: both
+      color: $main
+
+  .bubble.client
+    float: right
+    .content
+      background: #fafbff
+      border-radius: 25px 25px 2px 25px
+      text-align: right
+      float: right
+      .avatar
+        float: right
+    .time
+      text-align: right
+      clear: both
+  
+  .bubble.attachment
+    width: 100%
+    position: relative
+    margin: 5em 0 2em 0
+    clear: both
+    .preview
+      width: 15em
+      border-radius: .5em
+      overflow: hidden
+      box-shadow: 0px 9px 30px 0px rgba(44,55,79,.34)
+      position: absolute
+      left: 2em
+      bottom: 2em
+      img
+        width: 100%
+    .content
+      width: 100%
+      min-height: 22em
+      padding: 2em 5em 2em 20em
+      .title
+        font-size: 1.5em
         color: $main
+        font-weight: 300
+      .description
+        font-size: 1.1em
+        color: $copy
+        line-height: 1.65
+
+      .buttons_wrapper
+        margin-top: 3em
+        .button
+          margin-right: 1em
+    .icon
+      position: absolute
+      width: 40px
+      right: 2em
+      top: 2em

@@ -8,6 +8,26 @@ html, body {
   font-family: "Roboto", sans-serif;
   background: #f7f8fb; }
 
+.button {
+  padding: 1em 1.5em;
+  border-radius: 0.35em;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9em;
+  transition: background 0.4s ease-in-out; }
+
+.button_blue {
+  background: #50bbf2;
+  color: #fff; }
+  .button_blue:hover {
+    background: #0f8ccd; }
+
+.button_download {
+  background: #cedcef;
+  color: #fff; }
+  .button_download:hover {
+    background: #94b3dc; }
+
 #chat {
   width: 800px;
   height: 100%;
@@ -17,7 +37,8 @@ html, body {
     #chat .bubble .content {
       background: #fff;
       box-shadow: 0px 9px 30px 0 rgba(44, 55, 79, 0.07);
-      border-radius: 25px 25px 25px 2px; }
+      border-radius: 25px 25px 25px 2px;
+      display: inline-block; }
       #chat .bubble .content::before, #chat .bubble .content::after {
         content: "";
         display: table; }
@@ -32,16 +53,64 @@ html, body {
         margin: 2em; }
         #chat .bubble .content .avatar img {
           height: 100%; }
-        #chat .bubble .content .avatar .copy {
-          font-size: 1.1em;
-          line-height: 1.75;
-          color: #727678;
-          padding: 1.5em;
-          margin: 0; }
-      #chat .bubble .content .time {
-        font-weight: 700;
-        font-size: 0.8em;
-        clear: both;
-        color: #393f42; }
+      #chat .bubble .content .cody {
+        font-size: 1em;
+        line-height: 1.75;
+        color: #727678;
+        padding: 1.5em;
+        margin: 0; }
+    #chat .bubble .time {
+      font-weight: 500;
+      font-size: 0.8em;
+      clear: both;
+      color: #393f42; }
+  #chat .bubble.client {
+    float: right; }
+    #chat .bubble.client .content {
+      background: #fafbff;
+      border-radius: 25px 25px 2px 25px;
+      text-align: right;
+      float: right; }
+      #chat .bubble.client .content .avatar {
+        float: right; }
+    #chat .bubble.client .time {
+      text-align: right;
+      clear: both; }
+  #chat .bubble.attachment {
+    width: 100%;
+    position: relative;
+    margin: 5em 0 2em 0;
+    clear: both; }
+    #chat .bubble.attachment .preview {
+      width: 15em;
+      border-radius: 0.5em;
+      overflow: hidden;
+      box-shadow: 0px 9px 30px 0px rgba(44, 55, 79, 0.34);
+      position: absolute;
+      left: 2em;
+      bottom: 2em; }
+      #chat .bubble.attachment .preview img {
+        width: 100%; }
+    #chat .bubble.attachment .content {
+      width: 100%;
+      min-height: 22em;
+      padding: 2em 5em 2em 20em; }
+      #chat .bubble.attachment .content .title {
+        font-size: 1.5em;
+        color: #393f42;
+        font-weight: 300; }
+      #chat .bubble.attachment .content .description {
+        font-size: 1.1em;
+        color: #727678;
+        line-height: 1.65; }
+      #chat .bubble.attachment .content .buttons_wrapper {
+        margin-top: 3em; }
+        #chat .bubble.attachment .content .buttons_wrapper .button {
+          margin-right: 1em; }
+    #chat .bubble.attachment .icon {
+      position: absolute;
+      width: 40px;
+      right: 2em;
+      top: 2em; }
 
 /*# sourceMappingURL=style.css.map */
